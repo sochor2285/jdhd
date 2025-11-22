@@ -2,34 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1e293b;
-
-  /* HRUFIA Brand Colors - Blue palette for trust and cleanliness */
-  --primary-blue: #2563eb;
-  --primary-blue-dark: #1e40af;
-  --primary-blue-light: #3b82f6;
-  --accent-blue: #0ea5e9;
-  --light-blue: #e0f2fe;
-  --navy: #1e3a8a;
-
-  /* Neutral colors */
-  --gray-50: #f8fafc;
-  --gray-100: #f1f5f9;
-  --gray-200: #e2e8f0;
-  --gray-300: #cbd5e1;
-  --gray-700: #334155;
-  --gray-900: #0f172a;
+  --foreground: #0f172a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary-blue);
-  --color-primary-dark: var(--primary-blue-dark);
-  --color-primary-light: var(--primary-blue-light);
-  --color-accent: var(--accent-blue);
-  --color-light-blue: var(--light-blue);
-  --color-navy: var(--navy);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -43,14 +21,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Remove default margins */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Blue glow effects for hover states */
+@keyframes blue-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.5);
+  }
+}
+
+.blue-glow-hover:hover {
+  animation: blue-glow 2s ease-in-out infinite;
 }

@@ -1,7 +1,8 @@
+"use client";
+
 import { Paintbrush, Building, Layers, Sparkles } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
 
-// Map icon names to actual components
 const iconMap = {
   Paintbrush,
   Building,
@@ -11,59 +12,45 @@ const iconMap = {
 
 export function Services() {
   return (
-    <section id="sluzby" className="py-24 bg-gray-50">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section header */}
-        <div className="mx-auto max-w-2xl text-center mb-16">
-          <h2 className="text-base font-semibold leading-7 text-primary">
+    <section id="sluzby" className="py-32 bg-gray-900">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
             Naše služby
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Co pro vás můžeme udělat
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Nabízíme komplexní služby v oblasti malířských a lakýrnických prací
-            s důrazem na kvalitu a spokojenost zákazníků.
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Komplexní řešení pro bytové i nebytové prostory
           </p>
         </div>
 
-        {/* Services grid */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {SERVICES.map((service) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap];
 
             return (
               <div
                 key={service.id}
-                className="group relative bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20"
+                className="group bg-gray-800/50 border border-gray-700 p-8 rounded-2xl hover:border-blue-500 hover:bg-gray-800 transition-all"
               >
-                {/* Icon */}
-                <div className="mb-6">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                    <Icon className="h-7 w-7 text-primary group-hover:text-white transition-colors" />
-                  </div>
+                <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
+                  <Icon className="w-7 h-7 text-blue-400 group-hover:text-white transition-colors" />
                 </div>
 
-                {/* Content */}
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   {service.description}
                 </p>
-
-                {/* Hover effect decoration */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             );
           })}
         </div>
 
-        {/* CTA below services */}
         <div className="mt-16 text-center">
           <a
             href="#kontakt"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white shadow-lg hover:bg-primary-dark transition-all hover:shadow-xl"
+            className="inline-block px-10 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition-colors uppercase tracking-wide"
           >
             Poptat službu
           </a>

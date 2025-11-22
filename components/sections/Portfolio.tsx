@@ -1,122 +1,74 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
-
-// Sample portfolio data - user can replace with actual images
 const PORTFOLIO_ITEMS = [
   {
     id: 1,
-    title: "Malování obývacího pokoje",
+    title: "Moderní obývací pokoj",
     category: "Interiér",
-    before: "/placeholder-before.jpg",
-    after: "/placeholder-after.jpg",
+    location: "Praha 5",
   },
   {
     id: 2,
-    title: "Renovace fasády rodinného domu",
+    title: "Rodinný dům - fasáda",
     category: "Fasáda",
-    before: "/placeholder-before.jpg",
-    after: "/placeholder-after.jpg",
+    location: "Brno",
   },
   {
     id: 3,
-    title: "Stěrkování a malování ložnice",
+    title: "Stěrkování ložnice",
     category: "Stěrkování",
-    before: "/placeholder-before.jpg",
-    after: "/placeholder-after.jpg",
-  },
-  {
-    id: 4,
-    title: "Lakování dřevěných dveří",
-    category: "Lakování",
-    before: "/placeholder-before.jpg",
-    after: "/placeholder-after.jpg",
+    location: "Ostrava",
   },
 ];
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section header */}
-        <div className="mx-auto max-w-2xl text-center mb-16">
-          <h2 className="text-base font-semibold leading-7 text-primary">
-            Portfolio
+    <section id="portfolio" className="py-32 bg-gray-800">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
+            Ukázky práce
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Naše realizace
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Podívejte se na ukázky naší práce. Každý projekt dokládá naši preciznost a péči o detail.
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Nejdřív kouknu na ukázky
           </p>
         </div>
 
-        {/* Portfolio grid */}
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {PORTFOLIO_ITEMS.map((item) => (
-            <PortfolioCard key={item.id} item={item} />
+            <div
+              key={item.id}
+              className="group bg-gray-900 border border-gray-700 rounded-2xl overflow-hidden hover:border-blue-500 transition-all"
+            >
+              <div className="aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center border-b border-gray-700">
+                <div className="text-center">
+                  <div className="text-6xl mb-2 filter grayscale">📸</div>
+                  <div className="text-sm text-gray-500">Fotografie z realizace</div>
+                </div>
+              </div>
+
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{item.title}</h3>
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-full border border-blue-500/30">
+                    {item.category}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-500">{item.location}</p>
+              </div>
+            </div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <a
+            href="#kontakt"
+            className="inline-block px-10 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition-colors uppercase tracking-wide"
+          >
+            Nezávazná poptávka
+          </a>
         </div>
       </div>
     </section>
-  );
-}
-
-function PortfolioCard({
-  item,
-}: {
-  item: (typeof PORTFOLIO_ITEMS)[0];
-}) {
-  const [showAfter, setShowAfter] = useState(false);
-
-  return (
-    <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-      {/* Image container with before/after toggle */}
-      <div
-        className="relative h-80 bg-gray-100 cursor-pointer"
-        onMouseEnter={() => setShowAfter(true)}
-        onMouseLeave={() => setShowAfter(false)}
-      >
-        {/* Placeholder for images - using colored boxes as placeholders */}
-        <div
-          className={`absolute inset-0 transition-opacity duration-500 ${
-            showAfter ? "opacity-0" : "opacity-100"
-          }`}
-        >
-          <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-            <span className="text-gray-600 font-semibold">PŘED</span>
-          </div>
-        </div>
-
-        <div
-          className={`absolute inset-0 transition-opacity duration-500 ${
-            showAfter ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div className="w-full h-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-            <span className="text-white font-semibold">PO</span>
-          </div>
-        </div>
-
-        {/* Badge */}
-        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-primary">
-          {item.category}
-        </div>
-
-        {/* Toggle indicator */}
-        <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-medium text-white">
-          {showAfter ? "Po" : "Před"}
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="bg-white p-6">
-        <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-        <p className="mt-2 text-sm text-gray-600">
-          Najeďte myší pro zobrazení výsledku
-        </p>
-      </div>
-    </div>
   );
 }
