@@ -11,7 +11,7 @@ export function Header() {
     <>
       {/* Floating Navbar - Desktop */}
       <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden lg:block">
-        <nav className="bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-full px-10 py-4 shadow-2xl shadow-blue-500/10">
+        <nav className="bg-slate-900/90 backdrop-blur-md border border-slate-800 rounded-full px-10 py-4 shadow-2xl shadow-blue-500/10">
           <div className="flex items-center gap-10">
             {/* Logo */}
             <a href="#" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">
@@ -44,7 +44,7 @@ export function Header() {
       </header>
 
       {/* Mobile Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 lg:hidden bg-slate-900/95 backdrop-blur-md border-b border-white/10">
+      <header className="fixed top-0 left-0 right-0 z-50 lg:hidden bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
         <nav className="flex items-center justify-between px-6 py-4">
           {/* Logo */}
           <a href="#" className="text-xl font-bold text-white">
@@ -64,7 +64,7 @@ export function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="border-t border-white/10 bg-slate-900/98 backdrop-blur-md">
+          <div className="border-t border-slate-800 bg-slate-900/98 backdrop-blur-md">
             <div className="px-6 py-4 space-y-1">
               {NAVIGATION.map((item) => (
                 <a

@@ -35,8 +35,8 @@ export function Contact() {
   };
 
   return (
-    <section id="kontakt" className="py-32 bg-slate-900">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="kontakt" className="py-32 bg-slate-950">
+      <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,10 +45,10 @@ export function Contact() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Máte zájem o nabídku?
+            Napište nám
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Napište nám a my se vám ozveme do 24 hodin
+            Ozveme se vám do 24 hodin
           </p>
         </motion.div>
 
@@ -58,11 +58,11 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-8 lg:p-12 shadow-2xl shadow-blue-500/10"
+          className="bg-slate-900 border border-slate-800 rounded-3xl p-10 lg:p-12 shadow-2xl shadow-blue-500/10"
         >
           {/* Contact Info Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
+            <div className="text-center p-6 bg-slate-950/50 rounded-xl border border-slate-800">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-lg mb-3">
                 <Phone className="w-6 h-6 text-blue-400" />
               </div>
@@ -76,7 +76,7 @@ export function Contact() {
               <p className="text-xs text-slate-500 mt-1">Po - Pá: 8:00 - 17:00</p>
             </div>
 
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
+            <div className="text-center p-6 bg-slate-950/50 rounded-xl border border-slate-800">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-lg mb-3">
                 <Mail className="w-6 h-6 text-blue-400" />
               </div>
@@ -90,7 +90,7 @@ export function Contact() {
               <p className="text-xs text-slate-500 mt-1">Odpovíme do 24 hodin</p>
             </div>
 
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
+            <div className="text-center p-6 bg-slate-950/50 rounded-xl border border-slate-800">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-lg mb-3">
                 <MapPin className="w-6 h-6 text-blue-400" />
               </div>
@@ -104,7 +104,7 @@ export function Contact() {
           </div>
 
           {/* Form */}
-          <div className="bg-slate-900/50 border border-slate-700/50 rounded-xl p-6 lg:p-8">
+          <div className="bg-slate-950/50 border border-slate-800 rounded-xl p-6 lg:p-8">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
@@ -114,7 +114,7 @@ export function Contact() {
                   {...register("name")}
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="Jan Novák"
                 />
                 {errors.name && (
@@ -131,7 +131,7 @@ export function Contact() {
                     {...register("email")}
                     type="email"
                     id="email"
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                     placeholder="jan.novak@email.cz"
                   />
                   {errors.email && (
@@ -147,7 +147,7 @@ export function Contact() {
                     {...register("phone")}
                     type="tel"
                     id="phone"
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                     placeholder="+420 123 456 789"
                   />
                   {errors.phone && (
@@ -163,14 +163,14 @@ export function Contact() {
                 <select
                   {...register("serviceType")}
                   id="serviceType"
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                 >
-                  <option value="" className="bg-slate-800">Vyberte typ práce</option>
-                  <option value="interior" className="bg-slate-800">Malování interiérů</option>
-                  <option value="facade" className="bg-slate-800">Fasády</option>
-                  <option value="plastering" className="bg-slate-800">Stěrkování</option>
-                  <option value="painting" className="bg-slate-800">Lakýrnické práce</option>
-                  <option value="other" className="bg-slate-800">Jiné</option>
+                  <option value="" className="bg-slate-950">Vyberte typ práce</option>
+                  <option value="interior" className="bg-slate-950">Malování interiérů</option>
+                  <option value="facade" className="bg-slate-950">Fasády</option>
+                  <option value="plastering" className="bg-slate-950">Stěrkování</option>
+                  <option value="painting" className="bg-slate-950">Lakýrnické práce</option>
+                  <option value="other" className="bg-slate-950">Jiné</option>
                 </select>
                 {errors.serviceType && (
                   <p className="mt-1 text-sm text-red-400">{errors.serviceType.message}</p>

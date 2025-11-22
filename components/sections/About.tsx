@@ -27,7 +27,7 @@ const FEATURES = [
 
 export function About() {
   return (
-    <section id="o-nas" className="py-32 bg-slate-800">
+    <section id="o-nas" className="py-32 bg-slate-900">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">

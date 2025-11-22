@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="cs" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${poppins.variable} antialiased font-sans bg-slate-900`}
+        className={`${inter.variable} ${poppins.variable} antialiased font-sans bg-slate-950 text-slate-200`}
       >
         <Header />
         <main className="min-h-screen">{children}</main>
