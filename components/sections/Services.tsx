@@ -13,8 +13,8 @@ const iconMap = {
 
 export function Services() {
   return (
-    <section id="sluzby" className="py-32 bg-slate-950">
-      <div className="mx-auto px-4 max-w-7xl">
+    <section id="sluzby" className="py-32 bg-slate-950 flex justify-center">
+      <div className="w-full max-w-7xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

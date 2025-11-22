@@ -27,8 +27,8 @@ const FEATURES = [
 
 export function About() {
   return (
-    <section id="o-nas" className="py-32 bg-slate-900">
-      <div className="mx-auto px-4 max-w-7xl">
+    <section id="o-nas" className="py-32 bg-slate-900 flex justify-center">
+      <div className="w-full max-w-7xl px-4">
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Proč si vybrat HRUFIA

@@ -31,8 +31,8 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section className="py-32 bg-slate-950">
-      <div className="mx-auto px-4 max-w-7xl">
+    <section className="py-32 bg-slate-950 flex justify-center">
+      <div className="w-full max-w-7xl px-4">
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Jak postupujeme
