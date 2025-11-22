@@ -1,18 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { COMPANY_INFO, NAVIGATION } from "@/lib/constants";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+    <header className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <a href="#" className="text-2xl font-black text-white hover:text-blue-400 transition-colors">
+          <a href="#" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
             {COMPANY_INFO.name}
           </a>
         </div>
@@ -21,7 +21,7 @@ export function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="inline-flex items-center justify-center p-2 text-gray-400 hover:text-white"
+            className="inline-flex items-center justify-center p-2 text-slate-600 hover:text-slate-900"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Menu</span>
@@ -30,12 +30,12 @@ export function Header() {
         </div>
 
         {/* Desktop navigation */}
-        <div className="hidden lg:flex lg:gap-x-8">
+        <div className="hidden lg:flex lg:gap-x-8 lg:items-center">
           {NAVIGATION.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-semibold text-gray-300 hover:text-blue-400 uppercase tracking-wide transition-colors"
+              className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
             >
               {item.label}
             </a>
@@ -43,36 +43,38 @@ export function Header() {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-4">
           <a
-            href="#kontakt"
-            className="px-6 py-2.5 text-sm font-bold text-white bg-blue-500 hover:bg-blue-600 rounded-full transition-colors uppercase tracking-wide"
+            href={`tel:${COMPANY_INFO.phone}`}
+            className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors shadow-sm hover:shadow-md"
           >
-            Konzultace zdarma
+            <Phone className="w-4 h-4" />
+            Zavolat
           </a>
         </div>
       </nav>
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-800 bg-gray-900">
-          <div className="px-6 py-4 space-y-2">
+        <div className="lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md">
+          <div className="px-6 py-4 space-y-1">
             {NAVIGATION.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors uppercase"
+                className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.label}
               </a>
             ))}
             <a
-              href="#kontakt"
-              className="block px-3 py-2 text-base font-bold text-blue-400 hover:bg-gray-800 rounded transition-colors uppercase"
+              href={`tel:${COMPANY_INFO.phone}`}
+              className="flex items-center gap-2 px-3 py-2 text-base font-semibold text-blue-600 hover:bg-slate-50 rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Konzultace zdarma
+              <Phone className="w-4 h-4" />
+              Zavolat
             </a>
           </div>
         </div>

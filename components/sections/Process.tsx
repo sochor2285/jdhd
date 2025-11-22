@@ -31,34 +31,34 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section className="py-40 bg-gray-900">
-      <div className="w-full flex flex-col items-center px-4">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
             Jak postupujeme
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Od prvního kontaktu až po předání díla
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 max-w-7xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {STEPS.map((step) => {
             const Icon = step.icon;
             return (
-              <div key={step.number} className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-500 text-white rounded-full mb-6 group-hover:scale-110 transition-transform">
-                  <span className="text-3xl font-black">{step.number}</span>
+              <div key={step.number} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full mb-4 font-bold text-2xl">
+                  {step.number}
                 </div>
 
-                <div className="flex justify-center mb-4">
-                  <Icon className="w-10 h-10 text-blue-400" />
+                <div className="flex justify-center mb-3">
+                  <Icon className="w-8 h-8 text-blue-600" />
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-3">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   {step.description}
                 </p>
               </div>

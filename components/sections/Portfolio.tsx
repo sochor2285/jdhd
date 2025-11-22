@@ -23,47 +23,47 @@ const PORTFOLIO_ITEMS = [
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-32 bg-gray-800">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
+    <section id="portfolio" className="py-24 bg-white">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
             Ukázky práce
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Nejdřív kouknu na ukázky
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Podívejte se na naše realizace
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {PORTFOLIO_ITEMS.map((item) => (
             <div
               key={item.id}
-              className="group bg-gray-900 border border-gray-700 rounded-2xl overflow-hidden hover:border-blue-500 transition-all"
+              className="group cursor-pointer"
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center border-b border-gray-700">
+              <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl overflow-hidden mb-4 flex items-center justify-center hover:scale-105 transition-transform duration-300">
                 <div className="text-center">
-                  <div className="text-6xl mb-2 filter grayscale">📸</div>
-                  <div className="text-sm text-gray-500">Fotografie z realizace</div>
+                  <div className="text-6xl mb-2 opacity-40">📸</div>
+                  <div className="text-sm text-slate-500">Fotografie z realizace</div>
                 </div>
               </div>
 
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{item.title}</h3>
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-full border border-blue-500/30">
+              <div className="space-y-2">
+                <div className="flex items-start justify-between">
+                  <h3 className="text-lg font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">{item.title}</h3>
+                  <span className="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-medium rounded-full">
                     {item.category}
                   </span>
                 </div>
-                <p className="text-sm text-gray-500">{item.location}</p>
+                <p className="text-sm text-slate-500">{item.location}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
           <a
             href="#kontakt"
-            className="inline-block px-10 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition-colors uppercase tracking-wide"
+            className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md"
           >
             Nezávazná poptávka
           </a>

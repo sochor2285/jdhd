@@ -27,29 +27,29 @@ const FEATURES = [
 
 export function About() {
   return (
-    <section id="o-nas" className="py-40 bg-gray-800">
-      <div className="w-full flex flex-col items-center px-4">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
+    <section id="o-nas" className="py-24 bg-slate-50">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
             Proč si vybrat HRUFIA
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Spolehlivý partner pro vaše malířské a lakýrnické práce
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24 max-w-7xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {FEATURES.map((feature) => {
             const Icon = feature.icon;
             return (
-              <div key={feature.title} className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-500 rounded-full mb-6 group-hover:scale-110 transition-transform">
-                  <Icon className="h-10 w-10 text-white" />
+              <div key={feature.title} className="text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-50 rounded-xl mb-4">
+                  <Icon className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -57,24 +57,24 @@ export function About() {
           })}
         </div>
 
-        <div className="bg-gray-900 border border-gray-700 rounded-2xl p-12 text-center max-w-6xl w-full">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div className="bg-white border border-slate-200 rounded-2xl p-10 text-center shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="text-5xl font-black text-blue-400 mb-3">200+</div>
-              <div className="text-gray-400 font-semibold">Realizovaných projektů</div>
+              <div className="text-5xl font-bold text-blue-600 mb-2">200+</div>
+              <div className="text-slate-600 font-medium">Realizovaných projektů</div>
             </div>
             <div>
-              <div className="text-5xl font-black text-blue-400 mb-3">8+</div>
-              <div className="text-gray-400 font-semibold">Let zkušeností</div>
+              <div className="text-5xl font-bold text-blue-600 mb-2">8+</div>
+              <div className="text-slate-600 font-medium">Let zkušeností</div>
             </div>
             <div>
-              <div className="text-5xl font-black text-blue-400 mb-3">100%</div>
-              <div className="text-gray-400 font-semibold">Spokojenost zákazníků</div>
+              <div className="text-5xl font-bold text-blue-600 mb-2">100%</div>
+              <div className="text-slate-600 font-medium">Spokojenost zákazníků</div>
             </div>
           </div>
           <a
             href="#kontakt"
-            className="inline-block px-10 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition-colors uppercase tracking-wide"
+            className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md"
           >
             Nezávazná konzultace
           </a>
