@@ -27,8 +27,8 @@ const FEATURES = [
 
 export function About() {
   return (
-    <section id="o-nas" className="py-32 bg-gray-800">
-      <div className="container mx-auto px-4">
+    <section id="o-nas" className="py-40 bg-gray-800">
+      <div className="w-full flex flex-col items-center px-4">
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
             Proč si vybrat HRUFIA
@@ -38,7 +38,7 @@ export function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24 max-w-7xl w-full">
           {FEATURES.map((feature) => {
             const Icon = feature.icon;
             return (
@@ -57,7 +57,7 @@ export function About() {
           })}
         </div>
 
-        <div className="bg-gray-900 border border-gray-700 rounded-2xl p-12 text-center">
+        <div className="bg-gray-900 border border-gray-700 rounded-2xl p-12 text-center max-w-6xl w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
             <div>
               <div className="text-5xl font-black text-blue-400 mb-3">200+</div>

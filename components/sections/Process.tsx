@@ -31,8 +31,8 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section className="py-32 bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section className="py-40 bg-gray-900">
+      <div className="w-full flex flex-col items-center px-4">
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
             Jak postupujeme
@@ -42,7 +42,7 @@ export function Process() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 max-w-7xl w-full">
           {STEPS.map((step) => {
             const Icon = step.icon;
             return (
