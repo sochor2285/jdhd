@@ -5,7 +5,7 @@ import { COMPANY_INFO } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 min-h-screen flex items-center overflow-hidden">
+    <section className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 min-h-screen flex items-center overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-40 left-20 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl" />
@@ -26,11 +26,11 @@ export function Hero() {
               </span>
             </h1>
 
-            <p className="text-xl text-gray-400 mb-6 leading-relaxed">
+            <p className="text-xl text-slate-400 mb-6 leading-relaxed">
               Proměníme váš prostor v místo, kde budete rádi žít.
             </p>
 
-            <p className="text-lg text-gray-400 mb-14 leading-relaxed">
+            <p className="text-lg text-slate-400 mb-14 leading-relaxed">
               Profesionální malířské a lakýrnické služby s garancí kvality od roku 2017.
             </p>
 
@@ -44,7 +44,7 @@ export function Hero() {
               </a>
               <a
                 href="#portfolio"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border-2 border-gray-600 hover:border-blue-500 text-white font-bold rounded-full transition-all"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border-2 border-slate-700 hover:border-blue-500 text-white font-bold rounded-full transition-all"
               >
                 Nejdřív kouknu na ukázky
               </a>
@@ -54,8 +54,8 @@ export function Hero() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-xs text-gray-500 uppercase tracking-wider">Další</span>
-          <div className="w-px h-16 bg-gradient-to-b from-gray-600 to-transparent" />
+          <span className="text-xs text-slate-500 uppercase tracking-wider">Další</span>
+          <div className="w-px h-16 bg-gradient-to-b from-slate-600 to-transparent" />
         </div>
       </div>
     </section>

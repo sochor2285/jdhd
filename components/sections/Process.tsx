@@ -31,13 +31,13 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-slate-900">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Jak postupujeme
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Od prvního kontaktu až po předání díla
           </p>
         </div>
@@ -47,18 +47,18 @@ export function Process() {
             const Icon = step.icon;
             return (
               <div key={step.number} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full mb-4 font-bold text-2xl">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-500 text-white rounded-full mb-4 font-bold text-2xl shadow-lg shadow-blue-500/50">
                   {step.number}
                 </div>
 
                 <div className="flex justify-center mb-3">
-                  <Icon className="w-8 h-8 text-blue-600" />
+                  <Icon className="w-8 h-8 text-blue-400" />
                 </div>
 
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                <h3 className="text-lg font-semibold text-white mb-2">
                   {step.title}
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-400 leading-relaxed">
                   {step.description}
                 </p>
               </div>
