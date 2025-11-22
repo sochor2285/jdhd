@@ -11,15 +11,15 @@ export function Header() {
     <>
       {/* Floating Navbar - Desktop */}
       <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden lg:block">
-        <nav className="bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-full px-8 py-3 shadow-2xl shadow-blue-500/10">
-          <div className="flex items-center gap-8">
+        <nav className="bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-full px-10 py-4 shadow-2xl shadow-blue-500/10">
+          <div className="flex items-center gap-10">
             {/* Logo */}
             <a href="#" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">
               {COMPANY_INFO.name}
             </a>
 
             {/* Navigation */}
-            <div className="flex gap-6 items-center">
+            <div className="flex gap-8 items-center">
               {NAVIGATION.map((item) => (
                 <a
                   key={item.label}

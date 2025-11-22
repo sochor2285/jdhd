@@ -27,9 +27,9 @@ const FEATURES = [
 
 export function About() {
   return (
-    <section id="o-nas" className="py-24 bg-slate-800">
+    <section id="o-nas" className="py-32 bg-slate-800">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Proč si vybrat HRUFIA
           </h2>
@@ -38,7 +38,7 @@ export function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-20">
           {FEATURES.map((feature) => {
             const Icon = feature.icon;
             return (

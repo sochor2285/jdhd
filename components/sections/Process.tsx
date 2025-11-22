@@ -31,9 +31,9 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section className="py-24 bg-slate-900">
+    <section className="py-32 bg-slate-900">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Jak postupujeme
           </h2>
@@ -42,7 +42,7 @@ export function Process() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {STEPS.map((step) => {
             const Icon = step.icon;
             return (

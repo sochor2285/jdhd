@@ -23,9 +23,9 @@ const PORTFOLIO_ITEMS = [
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-slate-800">
+    <section id="portfolio" className="py-32 bg-slate-800">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Ukázky práce
           </h2>
@@ -34,7 +34,7 @@ export function Portfolio() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {PORTFOLIO_ITEMS.map((item) => (
             <div
               key={item.id}
@@ -60,7 +60,7 @@ export function Portfolio() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-16 text-center">
           <a
             href="#kontakt"
             className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-semibold rounded-lg transition-all shadow-lg shadow-blue-500/50"
